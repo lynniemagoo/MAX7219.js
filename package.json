@@ -1,0 +1,29 @@
+{
+  "name": "max7219-display",
+  "version": "1.0.1",
+  "description": "Abstraction for the MAX7219 display driver controller",
+  "main": "index.js",
+  "dependencies": {
+    "pi-spi": "^1.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antony/MAX7219.js.git"
+  },
+  "keywords": [
+    "hardware",
+    "max7219",
+    "display",
+    "driver",
+    "raspberrypi",
+    "beaglebone",
+    "black",
+    "spi"
+  ],
+  "author": "Antony Jones",
+  "license": "MPL 2.0",
+  "bugs": {
+    "url": "https://github.com/antony/MAX7219.js/issues"
+  },
+  "homepage": "https://github.com/antony/MAX7219.js"
+}
