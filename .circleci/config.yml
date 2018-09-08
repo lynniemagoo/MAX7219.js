@@ -33,8 +33,6 @@ workflows:
     jobs:
       - publish:
           context: org-global
-          requires:
-            - build
           filters:
             branches:
               ignore: /.*/
