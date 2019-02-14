@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/antony/MAX7219.js/issues"
   },
-  "homepage": "https://github.com/antony/MAX7219.js",
+  "homepage": "https://antony.github.io/MAX7219.js/",
   "devDependencies": {
     "got": "^8.3.2",
     "rollup": "^1.1.2",
