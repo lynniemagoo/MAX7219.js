@@ -87,6 +87,21 @@ init()
 | controllerCount | 1       | 1-8                              | how many individual units you have in your array (1-8)                                           |
 | flip            | none    | none, vertical, horizontal, both | In case you want to flip the array if they are soldered on upside down / back to front (or both) |
 
+### Scrolling
+
+To scroll a string of text on the display, you can use `.scroll()`.
+
+```js
+await m.scroll('HELLO WORLD')
+```
+
+Scroll has the following options:
+
+| Option        | default | type                            | meaning                                                                                          |
+|---------------|---------|---------------------------------|--------------------------------------------------------------------------------------------------|
+| loop          | true    | boolean                         | loop scrolling text endlesssly                                                                                 |
+| speed         | 300     | integer                         | milliseconds delay between next movement                                          |
+
 ### Credits
 
 Credits to me, but also based off an [original codebase](https://www.npmjs.com/package/max7219) by Victor Porov
