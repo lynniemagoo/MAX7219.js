@@ -1,7 +1,7 @@
 'use strict'
 
 const Max7219 = require('..')
-const m = new Max7219({ device: '/dev/spidev0.0', reverseDisplayOrdering: true, controllerCount: 4, flip: 'both' })
+const m = new Max7219({ device: '/dev/spidev0.0', reverseDisplayOrdering:true, controllerCount: 4, rotate:180 })
 
 async function init () {
   await m.resetAll();

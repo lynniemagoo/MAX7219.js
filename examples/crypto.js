@@ -2,7 +2,7 @@
 
 const Max7219 = require('..')
 const got = require('got')
-const m = new Max7219({ device: '/dev/spidev0.0', controllerCount: 4, flip: 'vertical' })
+const m = new Max7219({ device: '/dev/spidev0.0', controllerCount: 4})
 
 async function latest () {
   const { body } = await got('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD', {
@@ -13,10 +13,7 @@ async function latest () {
 }
 
 async function init () {
-  await m.reset(0)
-  await m.reset(1)
-  await m.reset(2)
-  await m.reset(3)
+  await m.resetAll();
   await m.letter(0, '$')
 
   setInterval (async () => {
