@@ -4,7 +4,7 @@
   "description": "Abstraction for the MAX7219 display driver controller",
   "main": "index.js",
   "dependencies": {
-    "pi-spi": "^1.0.2"
+    "pi-spi": "^1.2.1"
   },
   "scripts": {
     "docs": "rollup -c ./docs/rollup.config.js"
@@ -24,7 +24,7 @@
     "spi"
   ],
   "author": "Antony Jones",
-  "license": "MPL 2.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/antony/MAX7219.js/issues"
   },
