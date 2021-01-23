@@ -1,4 +1,4 @@
-import nodeResolve from 'rollup-plugin-node-resolve'
+import nodeResolve from '@rollup/plugin-node-resolve'
 import svelte from 'rollup-plugin-svelte'
 
 export default {
@@ -10,6 +10,8 @@ export default {
   },
   plugins: [
     nodeResolve(),
-    svelte()
+    svelte({
+      emitCss: false
+    })
   ]
 }

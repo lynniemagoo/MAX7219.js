@@ -14,12 +14,13 @@
 	</textarea>
 
 	<button type="button" on:click={copy}>
-		Copy Matrix to Clipboard
+		{buttonText}
 	</button>
 </div>
 
 <script>
 	let json
+	let buttonText = 'Copy Matrix to Clipboard'
 	const matrix = new Array(8).fill(0).map(r => new Array(8).fill(0))
 	
 	function toggle (r, c) {
@@ -29,8 +30,11 @@
 	function copy () {
 		json.select()
 		document.execCommand('copy')
-	}
-	
+		buttonText = 'Copied!'
+		setTimeout(() => {
+			buttonText = 'Copy Matrix to Clipboard'
+		}, 2000)
+	}	
 </script>
 
 <style>
@@ -76,5 +80,10 @@
 		background: none;
 		box-shadow: none;
 		border-radius: 0px;
+	}
+
+	button:hover {
+		background: darkslategrey;
+		color: white;
 	}
 </style>

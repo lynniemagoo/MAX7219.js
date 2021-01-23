@@ -1,14 +1,12 @@
 'use strict'
 
 const Max7219 = require('..')
-const got = require('got')
 const m = new Max7219({ device: '/dev/spidev0.0', controllerCount: 4})
+const fetch = require('node-fetch')
 
 async function latest () {
-  const { body } = await got('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD', {
-    json: true
-  })
-  console.log(body)
+  const res = await fetch('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD')
+  const body = await res.json()
   return body.USD.toString().split('.')[0].split('')
 }
 
@@ -17,7 +15,6 @@ async function init () {
   await m.letter(0, '$')
 
   setInterval (async () => {
-    console.log('call')
     const digits = await latest()
 
     await m.letter(1, digits[0])
