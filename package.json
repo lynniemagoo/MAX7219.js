@@ -1,6 +1,6 @@
 {
   "name": "max7219-display",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Abstraction for the MAX7219 display driver controller",
   "main": "index.js",
   "dependencies": {
