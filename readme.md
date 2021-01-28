@@ -4,7 +4,7 @@
 
 Display driver for MAX7219 designed for raspberry pi.
 
-Uses Promises and works on recent versions of node ( > 4 ). Tested up to Node v10.
+Uses Promises and works on all recent versions of node.
 
 ### Installing
 
