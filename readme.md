@@ -1,5 +1,7 @@
 ## Max7219
 
+![publish](https://github.com/antony/MAX7219.js/workflows/publish/badge.svg)
+
 Display driver for MAX7219 designed for raspberry pi.
 
 Uses Promises and works on recent versions of node ( > 4 ). Tested up to Node v10.
